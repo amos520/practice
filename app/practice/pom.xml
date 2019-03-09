@@ -15,7 +15,10 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
     </properties>
 
     <dependencies>
@@ -42,14 +45,40 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <!-- 热部署-->
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!-- 热部署-->
                 <configuration>
                     <fork>true</fork>
                 </configuration>
+            </plugin>
+
+            <!-- docker-->
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>1.0.2</version>
+                <configuration>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>-Xms512m</jvmFlag>
+                        </jvmFlags>
+                        <ports>
+                            <port>8080</port>
+                        </ports>
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                    </container>
+                    <from>
+                        <!--base image-->
+                        <image>openjdk:alpine</image>
+                    </from>
+                    <to>
+                        <image>119.29.89.219:5000/practice/jib-demo:${maven.build.timestamp}</image>
+                    </to>
+                    <allowInsecureRegistries>true</allowInsecureRegistries>
+                    <extraDirectory>${project.basedir}/src/main/jib</extraDirectory>
+
+                </configuration>
+
+
             </plugin>
         </plugins>
     </build>
