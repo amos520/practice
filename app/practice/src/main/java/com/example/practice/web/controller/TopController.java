@@ -31,6 +31,7 @@ public class TopController {
 
     @RequestMapping("loop")
     void loop(String cmd) {
+
         if ("stop".equals(cmd)) {
             flag = false;
         } else {
