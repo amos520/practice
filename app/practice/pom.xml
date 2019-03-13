@@ -57,6 +57,17 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.0.2</version>
                 <configuration>
+                    <from>
+                        <!--base image-->
+                        <image>119.29.89.219:5000/openjdk:alpine</image>
+                    </from>
+                    <to>
+                        <image>119.29.89.219:5000/practice</image>
+                        <tags>
+                            <tag>${maven.build.timestamp}</tag>
+                            <tag>latest</tag>
+                        </tags>
+                    </to>
                     <container>
                         <jvmFlags>
                             <jvmFlag>-Xms512m</jvmFlag>
@@ -66,13 +77,6 @@
                         </ports>
                         <useCurrentTimestamp>true</useCurrentTimestamp>
                     </container>
-                    <from>
-                        <!--base image-->
-                        <image>119.29.89.219:5000/openjdk:alpine</image>
-                    </from>
-                    <to>
-                        <image>119.29.89.219:5000/practice:${maven.build.timestamp}</image>
-                    </to>
                     <allowInsecureRegistries>true</allowInsecureRegistries>
                     <extraDirectory>${project.basedir}/src/main/jib</extraDirectory>
 
