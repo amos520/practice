@@ -19,6 +19,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
+        <docker.registry.ip>119.29.89.219:5000</docker.registry.ip>
     </properties>
 
     <dependencies>
@@ -59,10 +60,10 @@
                 <configuration>
                     <from>
                         <!--base image-->
-                        <image>119.29.89.219:5000/openjdk:alpine</image>
+                        <image>${docker.registry.ip}/openjdk:alpine</image>
                     </from>
                     <to>
-                        <image>119.29.89.219:5000/practice</image>
+                        <image>${docker.registry.ip}/practice</image>
                         <tags>
                             <tag>${maven.build.timestamp}</tag>
                             <tag>latest</tag>
