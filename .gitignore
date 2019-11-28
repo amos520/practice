@@ -2,6 +2,7 @@ project/target/
 project/.idea/
 *.iml
 *.jar
+*.vscode
 app/practice/.vscode/
 
 
