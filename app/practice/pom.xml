@@ -58,6 +58,16 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.3.0</version>
                 <configuration>
+                    <!--
+               from 如果使用aliyun的registry.cn-hangzhou.aliyuncs.com进行加速，需要在mvn配置文件setting.xml添加下面配置
+               <servers>
+                   <server>
+                     <id>registry.cn-hangzhou.aliyuncs.com</id>
+                     <username>你的阿里云账号</username>
+                     <password>你的阿里云密码</password>
+                   </server>
+               </servers>
+               -->
                     <from>
                         <!--base image-->
                         <image>${docker.registry.ip}/openjdk:alpine</image>
