@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PracticeApplication",
+            "request": "launch",
+            "mainClass": "com.example.practice.PracticeApplication",
+            "projectName": "practice"
+        }
+    ]
+}
