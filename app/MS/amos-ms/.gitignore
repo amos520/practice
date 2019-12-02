@@ -1,39 +1,33 @@
-project/target/
-project/.idea/
-*.iml
-*.jar
-app/practice/.vscode/
-
-
-# Eclipse
-.project
-.classpath
-.settings/
-
-# Maven
+HELP.md
 target/
-dependency-reduced-pom.xml
-pom.xml.versionsBackup
-.factorypath
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+# Package Files #
 
-# Gradle
-.gradle/
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 build/
 
-#IDEA
-# idea ignore
-.idea/
-*.ipr
-*.iml
-*.iws
-
-# temp ignore
-*.log
-*.cache
-*.diff
-*.patch
-*.tmp
-
-# system ignore
-.DS_Store
-Thumbs.db
+### VS Code ###
+.vscode/

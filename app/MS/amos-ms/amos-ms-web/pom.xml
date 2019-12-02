@@ -9,19 +9,34 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>amos-ms-api</artifactId>
+    <artifactId>amos-ms-web</artifactId>
     <version>1.0.0</version>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.amos</groupId>
+            <artifactId>amos-ms-ui</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.amos</groupId>
+            <artifactId>amos-ms-api</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>
+
 </project>
