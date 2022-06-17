@@ -23,7 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<!-- 特定版本快捷修改 -->
-		<fastjson.version>1.2.38</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<poi.version>3.16</poi.version>
 		<lombok.version>1.16.8</lombok.version>
 	</properties>
